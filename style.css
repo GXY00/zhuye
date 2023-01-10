@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(130, 203, 236);
+}
+
+.container {
+    display: flex;
+    border-radius: 50px;
+    background: #ffffff;
+    height: 1200px;
+    width: 1200px;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.header {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(168, 215, 236);
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+.dropd-b {
+    background-color: rgb(168, 215, 236);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropd {
+    display: inline-block;
+}
+
+.dropd-c {
+    display: none;
+    position: absolute;
+    background-color: rgb(168, 215, 236);
+    min-width: 160px;
+    text-align: center;
+    /*border-radius: 10px;*/
+}
+
+.dropd-b:hover {
+    background-color: aqua;
+}
+
+.dropd:hover .dropd-c {
+    display: block;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: aqua;
+}
+
+.search {
+    float: left;
+    width: 519px;
+    height: 42px;
+    background-color: #00a4ff;
+    margin-left: 355px;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+
+.search input {
+    float: left;
+    width: 500px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: 0;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.user {
+    float: right;
+    text-align: center
+}
+
+.user a {
+    float: right;
+    margin-left: 8px;
+}
+
+.pic-slide {
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 530px;
+}
+
+ul.slides {
+    position: relative;
+    width: 400px;
+    height: 203px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+li.slide {
+    margin: 10;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 50px;
+    transition: .5s transform ease-in-out;
+}
+
+.slide:nth-of-type(1) {
+    background-color: yellow;
+}
+
+.slide:nth-of-type(2) {
+    background-color: rgb(255, 153, 0);
+    left: 100%;
+}
+
+.slide:nth-of-type(3) {
+    background-color: rgb(0, 183, 255);
+    left: 200%;
+}
+
+.slide:nth-of-type(4) {
+    background-color: rgb(0, 255, 64);
+    left: 300%;
+}
+
+.slide:nth-of-type(5) {
+    background-color: rgb(166, 255, 0);
+    left: 400%;
+}
+
+input[type="radio"] {
+    position: relative;
+    z-index: 100;
+    display: none;
+}
+
+.controls-visible {
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    text-align: center;
+}
+
+.controls-visible label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(27, 26, 26);
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 2px solid #fff;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.controls-visible label:nth-of-type(1) {
+    background-color: rgb(255, 255, 255);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.controls-visible label:nth-of-type(2) {
+    background-color: rgb(255, 255, 255);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.controls-visible label:nth-of-type(3) {
+    background-color: rgb(255, 255, 255);
+}
+
+.slides input[type="radio"]:nth-of-type(4):checked~.controls-visible label:nth-of-type(4) {
+    background-color: rgb(255, 255, 255);
+}
+
+.slides input[type="radio"]:nth-of-type(5):checked~.controls-visible label:nth-of-type(5) {
+    background-color: rgb(255, 255, 255);
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.slide {
+    transform: translateX(0%);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.slide {
+    transform: translateX(-100%);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.slide {
+    transform: translateX(-200%);
+}
+
+.slides input[type="radio"]:nth-of-type(4):checked~.slide {
+    transform: translateX(-300%);
+}
+
+.slides input[type="radio"]:nth-of-type(5):checked~.slide {
+    transform: translateX(-400%);
+}
+
+img {
+    width: 401px;
+    height: 210px;
+}
